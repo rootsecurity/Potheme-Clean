@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="post">
+    <h1 id="title">Editor</h1>
+    <article>
+    {% if is_page %}
+        <form action="#" method="post" id="page_editor">
+            <div class="input">
+                <label for="title">Title</label>
+                {% if new %}
+                <input id="title" name="title" type="text" style="width:100%;">
+                {% else %}
+                <input id="title" name="title" type="text" style="width:100%;" value="{{ page.title }}">
+                {% end %}
+            </div>
+            <div class="input">
+                <label for="content">Content</label><br />
+                {% if new %}
+                <textarea rows="30" id="content" name="content"></textarea>
+                {% else %}
+                <textarea rows="30" id="content" name="content">{{ page.content }}</textarea>
+                {% end %}
+            <div id="submit">
+                <button type="submit">Post</button>
+            </div>
+        </form>
+        {% else %}
+        <form action="#" method="post" id="article_editor">
+            <div class="input">
+                <label for="title">Title</label>
+                {% if new %}
+                <input id="title" name="title" type="text" style="width:100%;">
+                {% else %}
+                <input id="title" name="title" type="text" style="width:100%;" value="{{ article.title }}">
+                {% end %}
+            </div>
+            <div class="input">
+                <label for="tag">Tag</label>
+                {% if new %}
+                <input id="tag" name="tag" type="text" style="width:100%;">
+                {% else %}
+                <input id="tag" name="tag" type="text" style="width:100%;" value="{{ article.tag }}">
+                {% end %}
+            </div>
+            <div class="input">
+                <label for="content">Content</label><br />
+                {% if new %}
+                <textarea rows="30" id="content" name="content"></textarea>
+                {% else %}
+                <textarea rows="30" id="content" name="content">{{ article.content }}</textarea>
+                {% end %}
+            <div id="submit">
+                <button type="submit">Post</button>
+            </div>
+        </form>
+        {% end %}
+    </article>
+</div>
+{% end %}

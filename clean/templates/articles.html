@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% for article in articlesList %}
+{% for year in article.keys() %}
+<h2>{{ year }}</h2>
+<ol id="posts">
+    {% for i in range(len(article[year])) %}
+    <li>
+        <span class="meta">{{ article[year][i].datetime[:10] }}</span> <a href="/article/{{ article[year][i].id }}">{{ article[year][i].title }}</a>
+    </li>
+    {% end %}
+</ol>
+{% end %}
+{% end %}
+{% end %}

@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Tag: {{ tag_name }}</h2>
+<ol id="posts">
+    {% for article in articlesList %}
+    <li>
+        <span class="meta">{{ article.datetime[:10] }}</span> <a href="/article/{{ article.id }}">{{ article.title }}</a>
+    </li>
+    {% end %}
+</ol>
+{% end %}

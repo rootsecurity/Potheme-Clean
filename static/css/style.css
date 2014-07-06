@@ -128,6 +128,11 @@ textarea {
     padding:5px;
     width:98%;
 }
+button {
+	border:0;
+	background-color:#FFF;
+	text-decoration:underline;
+}
 button,input,select,textarea {
 	font-family:inherit;
 	font-size:100%;

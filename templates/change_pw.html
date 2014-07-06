@@ -18,7 +18,7 @@
     <h1 id="title">Login</h1>
     <article>
         {% if message %}
-            <div class="item"><p>{{ message }}</p></div>
+            <div class="item"><center><p>{{ message }}</p></center></div>
         {% end %}
         <div class="item">
             <form action="#" method="post" id="change_pw">
@@ -31,8 +31,8 @@
                 <div class="input">
                     <label for="n_password_c">Confirm New Password</label><input id="n_password_c" name="n_password_c" type="password">
                 </div>
-                <div id="submit">
-                    <button onclick="Check()">Submit</button>
+                <div id="button">
+                    <button type="button" onclick="Check()">Submit</button>
                 </div>
             </form>
         </div>

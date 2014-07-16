@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 
+{% block title %} | {{ tag_name }}{% end %}
+
 {% block content %}
 <h2>Tag: {{ tag_name }}</h2>
 <ol id="posts">

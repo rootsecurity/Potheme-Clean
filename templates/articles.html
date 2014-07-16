@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 
+{% block title %} | Articles{% end %}
+
 {% block content %}
 {% for article in articlesList %}
 {% for year in article.keys() %}

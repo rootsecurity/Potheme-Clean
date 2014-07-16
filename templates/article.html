@@ -10,7 +10,7 @@
         <meta name="twitter:title" content="{{ article.title }}">
         <meta name="twitter:description" content="{{ handler.description(handler.md_to_html(article.content)) }}">
         <meta name="twitter:creator" content="{{ twitter_username }}">
-        <meta name="twitter:domain" content="{{ blog_url }}">
+        <meta name="twitter:domain" content="{{ handler.settings['blog_url'] }}">
     {% end %}
 {% end %}
 

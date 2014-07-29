@@ -7,7 +7,7 @@
 <ol id="posts">
     {% for article in articlesList %}
     <li>
-        <span class="meta">{{ article.datetime[:10] }}</span> <a href="/article/{{ article.id }}">{{ article.title }}</a>
+        <span class="meta">{{ article.datetime[:10] }}</span> <a href="/article/{{ article.article_id }}">{{ article.title }}</a>
     </li>
     {% end %}
 </ol>

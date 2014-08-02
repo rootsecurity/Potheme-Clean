@@ -71,7 +71,7 @@ function DeleteCookie (name) {
                 {% if new %}
                 <input id="title" name="title" type="text" style="width:100%;">
                 {% else %}
-                <input id="title" name="title" type="text" style="width:100%;" value="{{ onchange.title }}">
+                <input id="title" name="title" type="text" style="width:100%;" value="{{ content.title }}">
                 {% end %}
             </div>
             <div class="input">
@@ -79,7 +79,7 @@ function DeleteCookie (name) {
                 {% if new %}
                 <textarea rows="30" id="content" name="content" onkeyup="AutoSave(this);" onchange="AutoSave(this);" ondblclick="AutoLoad(this);"></textarea>
                 {% else %}
-                <textarea rows="30" id="content" name="content" onkeyup="AutoSave(this);" onchange="AutoSave(this);" ondblclick="AutoLoad(this);">{{ onchange.content }}</textarea>
+                <textarea rows="30" id="content" name="content" onkeyup="AutoSave(this);" onchange="AutoSave(this);" ondblclick="AutoLoad(this);">{{ content.content }}</textarea>
                 {% end %}
                 <label>Tip: Double click box to load last autosave content</label>
             <div id="submit">

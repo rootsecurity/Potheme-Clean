@@ -9,6 +9,7 @@
     {% end %}
 </ol>
 
+{% if count > post_per_page %}
 <div id="pagination">
     {% if page_number-1 > 0 %}
     <a id="prev" href="/page/{{ page_number-1 }}">Prev</a>
@@ -20,4 +21,5 @@
     <a id="next" href="/page/{{ page_number+1 }}">Next</a>
     {% end %}
 </div>
+{% end %}
 {% end %}

@@ -29,6 +29,12 @@
         <a href="/tag/{{ tag }}">{{ tag }}</a>
         {% end %}
     </div>
+    {% if current_user %}
+    <div class="operation">
+        <a href="/admin/edit/article/{{ article.id }}">Edit</a>
+        <a style="text-decoration:underline;" onclick="if(confirm('Are you sure to delete this article?')){window.location.href='/admin/edit/delete/article/{{ article.id }}';}">Delete</a>
+    </div>
+    {% end %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = '{{ disqus_name.strip().lstrip() }}';

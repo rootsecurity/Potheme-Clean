@@ -481,11 +481,21 @@ table {
 	border-top:1px solid rgba(0,0,0,0.1)
 }
 #content .post .tags {
+	display:inline;
 	color:gray;
 	font-style:italic;
 	font-size:0.9em
 }
 #content .post .tags a {
+	color:gray
+}
+#content .post .operation {
+	color:gray;
+	float:right;
+	font-style:italic;
+	font-size:0.9em
+}
+#content .post .operation a {
 	color:gray
 }
 #footer {

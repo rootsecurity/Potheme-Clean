@@ -17,6 +17,29 @@
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Page Title</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for page in handler.get_custom_page() %}
+                    <tr>
+                        <td>{{ page.id }}</td>
+                        <td>{{ page.title }}</td>
+                        <td>
+                            <a href="/admin/edit/page/{{ page.id }}">Edit</a>
+                            <a style="text-decoration:underline;" onclick="if(confirm('Are you sure to delete this article?')){window.location.href='/admin/edit/delete/page/{{ page.id }}';}">Delete</a>
+                        </td>
+                    </tr>
+                {% end %}
+                </tbody>
+            </table>
+        </div>
+        <div class="item">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
                         <th>Article Name</th>
                         <th>Created</th>
                         <th>Manage</th>
@@ -31,29 +54,6 @@
                         <td>
                             <a href="/admin/edit/article/{{ article.id }}">Edit</a>
                             <a style="text-decoration:underline;" onclick="if(confirm('Are you sure to delete this article?')){window.location.href='/admin/edit/delete/article/{{ article.id }}';}">Delete</a>
-                        </td>
-                    </tr>
-                {% end %}
-                </tbody>
-            </table>
-        </div>
-        <div class="item">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Page Title</th>
-                        <th>Manage</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {% for page in handler.get_custom_page() %}
-                    <tr>
-                        <td>{{ page.id }}</td>
-                        <td>{{ page.title }}</td>
-                        <td>
-                            <a href="/admin/edit/page/{{ page.id }}">Edit</a>
-                            <a style="text-decoration:underline;" onclick="if(confirm('Are you sure to delete this article?')){window.location.href='/admin/edit/delete/page/{{ page.id }}';}">Delete</a>
                         </td>
                     </tr>
                 {% end %}

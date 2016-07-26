@@ -93,9 +93,17 @@ legend {
 form {
 	text-align:center;
 }
-div .item {
+div .page-item {
     margin-top:15px;
-	border-bottom:1px solid rgba(0,0,0,0.1)
+	border-bottom:1px solid rgba(0,0,0,0.1);
+	overflow:scroll;
+	max-height:300px;
+}
+div .article-item {
+    margin-top:15px;
+	border-bottom:1px solid rgba(0,0,0,0.1);
+	overflow:scroll;
+	max-height:600px;
 }
 div#submit {
 	margin:10px;

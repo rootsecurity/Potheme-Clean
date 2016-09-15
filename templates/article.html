@@ -35,6 +35,7 @@
         <a style="text-decoration:underline;" onclick="if(confirm('Are you sure to delete this article?')){window.location.href='/admin/edit/delete/article/{{ article.id }}';}">Delete</a>
     </div>
     {% end %}
+    {% if comment %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = '{{ disqus_name.strip().lstrip() }}';
@@ -45,5 +46,6 @@
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {% end %}
 </div>
 {% end %}
